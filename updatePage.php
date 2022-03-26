@@ -35,21 +35,21 @@
             
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" 
+                <input type="text" class="form-control" name="title"
                     id="name" value="<?= $product['title'] ?>">
                 
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <input type="text" class="form-control" 
+                <input type="text" class="form-control" name="description"
                     value="<?= $product['description'] ?>" id="description">
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
-                <input type="text" class="form-control" 
+                <input type="text" class="form-control" name="price"
                     value="<?= $product['price'] ?>" id="price">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
 </body>

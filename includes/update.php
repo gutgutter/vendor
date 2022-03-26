@@ -7,9 +7,10 @@
     $description = $_POST['description'];
     $price = $_POST['price'];
 
-    mysqli_query($connect, 
-        "UPDATE goods SET title='$title', description='$description',
-        price='$price' WHERE id='$id'");
+    $sql = "UPDATE `goods` SET `title` = '$title', 
+        `description` = '$description', `price` = '$price' WHERE `goods`.`id` = '$id'";
+
+    mysqli_query($connect, $sql);
 
     header('Location: ../index.php');
     
