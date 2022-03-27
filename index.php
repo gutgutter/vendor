@@ -15,7 +15,7 @@
     <title>Goods</title>
     <style>
         @media (min-width: 1200px) {
-            .container.cTable{
+            .cTable{
                 max-width: 500px;
                 float: left;
                 margin-left: 80px;
@@ -23,19 +23,25 @@
                 padding: 10px;
             }
         }
+        .goodsList {
+            text-align: center;
+            background-color: lightgrey;
+            padding-bottom: 10px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <table class="table table-hover mt-2">
+        <h1 class="goodsList">Lisy Of Goods</h1>
+        <table class="table table-hover">
             <thead class="table-dark">
                 <tr>
                     <th scope="col">id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Price</th>
                     <th scope="col">Description</th>
-                    <th scope="col">&#9672;</th>
                     <th scope="col">&#9998;</th>
                     <th scope="col">&#10006;</th>
                 </tr>
@@ -51,7 +57,6 @@
                     <td><?= $product[1] ?></td>
                     <td><?= $product[2] ?></td>
                     <td><?= $product[3] ?></td> 
-                    <td><a href="includes/product.php?id=<?= $product[0] ?>">See</a></td>
                     <td><a href="updatePage.php?id=<?= $product[0] ?>">Update</a></td>
                     <td><a href="includes/delete.php?id=<?= $product[0] ?>">Delete</a></td> 
                 </tr>
@@ -64,6 +69,7 @@
     </div>
 
     <div class="container cTable bg-secondary">
+        <h1 class="addGood" style="text-align: center;">Add a new good</h1>
         <form action="includes/create.php" method="POST" id="createForm">
             
             <div class="mb-3">
